@@ -1,8 +1,5 @@
-import { Plus } from 'lucide-react'
-import { OutlineButton } from './ui/outline-button'
 import { getWeekPendingGoal } from '@/actions/get-week-pending-goal'
-import { CompleteGoalButton } from './complete-goa-button'
-import { createGoalCompletion } from '@/actions/create-goal-completion'
+import { CompleteGoalButton } from './complete-goal-button'
 
 export async function PendingGoals() {
   const pendingGoals = await getWeekPendingGoal()
@@ -23,22 +20,3 @@ export async function PendingGoals() {
     </div>
   )
 }
-
-/**
- * 
- * const [pendingGoals, setPendingGoals] = useState<GetWeekPendingGoal[]>([])
-
-  const fetchPendingGoals = useCallback(async () => {
-    const response = await getWeekPendingGoal()
-    setPendingGoals(response)
-  }, [])
-
-  useEffect(() => {
-    fetchPendingGoals()
-  }, [fetchPendingGoals])
-
-  async function handleCompletionGoal(goalId: string) {
-    await createGoalCompletion({ goalId })
-    fetchPendingGoals() // Atualiza as metas após completar uma
-  }
- */

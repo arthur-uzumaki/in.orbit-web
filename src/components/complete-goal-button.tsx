@@ -31,22 +31,3 @@ export async function CompleteGoalButton({
     </div>
   )
 }
-
-/**
- * 
- * const [pendingGoals, setPendingGoals] = useState<GetWeekPendingGoal[]>([])
-
-  const fetchPendingGoals = useCallback(async () => {
-    const response = await getWeekPendingGoal()
-    setPendingGoals(response)
-  }, [])
-
-  useEffect(() => {
-    fetchPendingGoals()
-  }, [fetchPendingGoals])
-
-  async function handleCompletionGoal(goalId: string) {
-    await createGoalCompletion({ goalId })
-    fetchPendingGoals() // Atualiza as metas após completar uma
-  }
- */
